@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+#import "Apple.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *Status;
@@ -17,10 +19,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    AppDelegate * appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.tree = appdelegate.tree;
 }
 - (IBAction)growTree:(void *)sender {
-    [_Status setText:@"Tree grew!"];
+    [self.tree addApple: [[Apple alloc]initColor:@"green" withStones:14]];
+    [_Status setText:[NSString stringWithFormat:@"Tree grew!Count of apple=%d", [self.tree.appleArray count]]];
 }
 - (IBAction)shakeTree:(void *)sender {
     [_Status setText:@"Tree shaked!"];

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppleTree.h"
 
 @interface ViewController : UIViewController
-
+@property AppleTree* tree;
 @end
