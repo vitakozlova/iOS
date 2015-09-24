@@ -16,7 +16,8 @@
     _stoneCount = stoneCount_;
     _color = color_;
     return self;
-}-(Boolean) fall
+}
+-(Boolean) fall
 {
     _hung = false;
     NSLog(@"Apple is fallen");

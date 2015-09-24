@@ -12,7 +12,7 @@
 @interface AppleTree : NSObject
 @property NSMutableArray* appleArray;
 -(id)init;
--(void) addApple:(Apple*) a;
--(void) removeApple:(NSInteger) index;
+-(void) addApple;
+-(void) removeApple;
 -(void) shake;
 @end

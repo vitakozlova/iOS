@@ -14,13 +14,11 @@
     _appleArray = [[NSMutableArray alloc]init];
     return self;
 }
--(void) addApple:(Apple *)a
-{
-    [_appleArray addObject:a];
+-(void) addApple {
+    [_appleArray addObject:[[Apple alloc]initColor:@"green" withStones:3]];
 }
--(void) removeApple:(NSInteger)index
-{
-    [_appleArray removeObjectAtIndex:index];
+-(void) removeApple {
+    [_appleArray removeObjectAtIndex:[_appleArray count] - 1];
 }
 -(void) shake {
 //    [super shake];

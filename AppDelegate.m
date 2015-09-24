@@ -14,15 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.tree = [[AppleTree alloc]init];
-    Apple* a1 = [[Apple alloc]initColor:@"green" withStones:12];
-    Apple* a2 = [[Apple alloc]initColor:@"green" withStones:10];
-    Apple* a3 = [[Apple alloc]initColor:@"green" withStones:11];
-    Apple* a4 = [[Apple alloc]initColor:@"green" withStones:12];
-    [self.tree addApple:a1];
-    [self.tree addApple:a2];
-    [self.tree addApple:a3];
-    [self.tree addApple:a4];
-    
+    for(NSInteger i = 0; i < 4; i++)
+        [self.tree addApple];
     return YES;
 }
 							
